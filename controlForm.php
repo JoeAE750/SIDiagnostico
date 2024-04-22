@@ -1,13 +1,12 @@
 <?php
-    // Check if the request method is POST
+
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Get the raw POST data
+
         $rawData = file_get_contents('php://input');
 
-        // Decode the JSON data to a PHP array
+
         $data = json_decode($rawData, true);
 
-        // Now you can access the data from the form
         $S1 = $data['reinicioContinuo'];
         $S2 = $data['pantallazosAzules'];
         $S3 = $data['errorAlGuardarInformacion'];
@@ -19,9 +18,7 @@
         $S9 = $data['noArranca'];
         $S10 = $data['cortocircuitos'];
 
-        // Perform your processing here.
-        // This could involve running some diagnostics based on the received data,
-        // storing the data in a database, etc.
+
 
         if ($S1 == "si" && $S2 == "si" && $S3 == "no" && $S4 == "si" && $S5 == "no" && $S6 == "no" && $S7 == "si" && $S8 == "no" && $S9 == "si" && $S10 == "no") {
             $rp = "Problema de Ram detectado";
@@ -68,16 +65,14 @@
         }
 
         
-        // After processing, you can return a response. For example:
+
         $response = [
             'diagnosis' => $rp,
-            // ... any other data you want to send back
+
         ];
 
-        
-        // Make sure to set the Content-Type header to application/json
+
         header('Content-Type: application/json');
-        // Encode the response to JSON format and print (send it back to the client)
         echo json_encode($response);
     }
 ?>
