@@ -6,7 +6,7 @@ function validarBoton($boton)
 
 $btnEnviar = $_POST['btnEnviar'];
 
-if(validarBoton($btnIngresar))
+if(validarBoton($btnEnviar))
 {
     //Reglas
 }else{
