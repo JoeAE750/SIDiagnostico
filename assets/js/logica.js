@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Aquí deberías procesar los datos recibidos de la API y mostrarlos en la página HTML
             // Por ejemplo, puedes actualizar el contenido de un div con el resultado
             const resultadoDiv = document.getElementById('resultado');
-            resultadoDiv.textContent = `Diagnóstico: ${data.diagnosis}`;
+            resultadoDiv.textContent = `${data.diagnosis}`;
         })
         .catch(error => {
             console.error('Error:', error);
