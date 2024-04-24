@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Hacer la solicitud a la API PHP
         //AQUI PONER URL API
-        fetch('/control/controlForm.php', {
+        fetch('/assets/api/controlForm.php', {
             method: 'POST', // O el método correcto para tu API
             headers: {
                 'Content-Type': 'application/json' // Especifica el tipo de contenido que estás enviando
