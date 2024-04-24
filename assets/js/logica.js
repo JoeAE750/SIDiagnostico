@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Hacer la solicitud a la API PHP
         //AQUI PONER URL API
-        fetch('controlForm.php', {
+        fetch('/assets/api/controlForm.php', {
             method: 'POST', // O el método correcto para tu API
             headers: {
                 'Content-Type': 'application/json' // Especifica el tipo de contenido que estás enviando
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Aquí deberías procesar los datos recibidos de la API y mostrarlos en la página HTML
             // Por ejemplo, puedes actualizar el contenido de un div con el resultado
             const resultadoDiv = document.getElementById('resultado');
-            resultadoDiv.textContent = `Diagnóstico: ${data.diagnosis}`;
+            resultadoDiv.textContent = `${data.diagnosis}`;
         })
         .catch(error => {
             console.error('Error:', error);
